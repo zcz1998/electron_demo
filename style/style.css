@@ -1,0 +1,295 @@
+ *,
+ body {
+     margin: 0;
+     padding: 0;
+ }
+
+ ul,
+ li {
+     list-style: none;
+ }
+
+
+ /* 聊天消息容器 */
+ .chat-container {
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+ }
+
+ .sidebar {
+     width: 60px;
+     height: 100%;
+     background-color: #111111;
+ }
+
+ .sidebar .avatar {
+     width: 40px;
+     height: 40px;
+     margin: 20px auto;
+     background-color: #fff;
+     border-radius: 2.5px;
+ }
+
+ .sidebar .avatar img {
+     width: 100%;
+     height: 100%;
+ }
+
+ .sidebar .icon {
+     margin: 20px auto;
+     width: 30px;
+     height: 30px;
+ }
+
+ .sidebar .icon img {
+     width: 100%;
+     height: 100%;
+ }
+
+ /* 消息列表 */
+ .message-list {
+     display: flex;
+     flex-direction: column;
+     width: 200px;
+     height: 100%;
+     background-color: #f7f7f7;
+ }
+
+ .message-list .search {
+     display: flex;
+     box-sizing: border-box;
+     height: 50px;
+     padding: 10px;
+     border-bottom: 1px solid #d3d3d3;
+ }
+
+
+ .message-list .search input {
+     width: 100%;
+     outline: none;
+     border: none;
+     padding: 0 5px;
+     border-radius: 5px;
+     font-size: 15px;
+ }
+
+ .message-list li {
+     display: flex;
+     align-items: center;
+     width: 100%;
+     height: 60px;
+     border-bottom: 1px solid #d3d3d3;
+ }
+
+ .message-list li.selected {
+     background-color: #d3d3d3;
+ }
+
+ .profile {
+     width: 35px;
+     height: 35px;
+     margin: 0 10px;
+     border-radius: 2.5px;
+     background-color: #fff;
+     overflow: hidden;
+ }
+
+ .profile img {
+     width: 100%;
+     height: 100%;
+ }
+
+
+
+ .message-box {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     background-color: #f3f3f3;
+ }
+
+ .message-box-t {
+     display: flex;
+     align-items: center;
+     box-sizing: border-box;
+     height: 50px;
+     padding: 10px;
+     border-bottom: 1px solid #d3d3d3;
+ }
+
+ .message-box-t .sender-name {
+     margin: 20px;
+ }
+
+ .message-box-m {
+     display: flex;
+     flex-direction: column;
+     flex: 1;
+     padding: 20px 10px 0;
+     border-bottom: 1px solid #d3d3d3;
+     overflow-y: scroll;
+ }
+
+ .message-box-b {
+     display: flex;
+     flex-direction: column;
+     height: 150px;
+     padding: 0 20px;
+ }
+
+ .message-box-b ul {
+     display: flex;
+     padding: 5px;
+ }
+
+ .message-box-b ul li {
+     width: 25px;
+     height: 25px;
+     margin-right: 10px;
+ }
+
+ .message-box-b ul li img {
+     width: 100%;
+     height: 100%;
+ }
+
+ .message-box-b .message {
+     display: flex;
+     flex: 1;
+     justify-content: space-between;
+
+ }
+
+ .message-box-b .message textarea {
+     flex: 1;
+     padding: 5px 10px;
+     border: none;
+     outline: none;
+     resize: none;
+     font-size: 15px;
+     background-color: #f3f3f3;
+ }
+
+ .send {
+     display: flex;
+     padding-bottom: 20px;
+     align-items: flex-end;
+ }
+
+ .send span {
+     height: 25px;
+     line-height: 25px;
+     padding: 0 10px;
+     border-radius: 2.5px;
+     color: #fff;
+     background-color: #57be6b;
+     cursor: pointer;
+ }
+
+
+
+ /* 对话消息样式 */
+ .chat-message {
+     display: flex;
+     justify-content: flex-end;
+     padding: 10px 10px 30px;
+     position: relative;
+ }
+
+
+ .sender .chat-text {
+     position: relative;
+     padding: 10px;
+     margin: 0 5px;
+     border-radius: 5px;
+     background-color: #a9ea7a;
+ }
+
+ .sender .chat-text:after {
+     position: absolute;
+     content: '';
+     width: 0;
+     height: 0;
+     right: -15px;
+     border-top: 8px solid transparent;
+     border-right: 8px solid transparent;
+     border-bottom: 8px solid transparent;
+     border-left: 10px solid #a9ea7a;
+ }
+
+
+ .chat-text img {
+     width: 150px;
+ }
+
+ .edit {
+     position: absolute;
+     width: 60px;
+     bottom: 10px;
+     right: 60px;
+     font-size: 12px;
+ }
+
+ .receiver .edit {
+     left: 70px;
+ }
+
+ .edit .delete {
+     color: #e47470;
+     cursor: pointer;
+ }
+
+ .edit .withdraw {
+     color: #919398;
+     cursor: pointer;
+ }
+
+
+ .receiver {
+     flex-direction: row-reverse;
+ }
+
+ .receiver .chat-text {
+     position: relative;
+     padding: 10px;
+     margin: 0 5px;
+     border-radius: 5px;
+     background-color: #ffffff;
+ }
+
+ .receiver .chat-text:after {
+     position: absolute;
+     content: '';
+     width: 0;
+     height: 0;
+     left: -15px;
+     border-top: 8px solid transparent;
+     border-right: 10px solid #ffffff;
+     border-bottom: 8px solid transparent;
+     border-left: 8px solid transparent;
+ }
+
+
+
+ .chat-time {
+     position: absolute;
+     top: -15px;
+     left: 50%;
+     padding-top: 10px;
+     transform: translateX(-50%);
+     font-size: 12px;
+     color: #adadad;
+ }
+
+ /* 撤回消息样式 */
+ .chat-withdraw {
+     position: absolute;
+     top: 5px;
+     left: 50%;
+     padding-top: 10px;
+     transform: translateX(-50%);
+     font-size: 12px;
+     color: #adadad;
+ }

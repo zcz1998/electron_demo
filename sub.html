@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline';">
+  <title>微信</title>
+  <link rel="stylesheet" href="./style/normalize.css">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+  <div class="chat-container">
+    <ul class="sidebar">
+      <li class="avatar">
+        <img src="./image/avatar.png" alt="" class="avatar-pic">
+      </li>
+      <li class="icon">
+        <img src="./image/message.png" alt="">
+      </li>
+      <li class="icon">
+        <img src="./image/friend.png" alt="">
+      </li>
+      <li class="icon">
+        <img src="./image/file.png" alt="">
+      </li>
+      <li class="icon">
+        <img src="./image/apps.png" alt="">
+      </li>
+    </ul>
+    <ul class="message-list">
+      <div class="search">
+        <input type="text" placeholder="搜索">
+      </div>
+      <li class="message-item selected">
+        <div class="profile">
+          <img src="./image/logo.png" alt="">
+        </div>
+        <div>联系人B</div>
+      </li>
+    </ul>
+    <div class="message-box">
+      <div class="message-box-t">
+        <div class="sender-name">联系人B</div>
+      </div>
+      <div class="message-box-m">
+      </div>
+      <div class="message-box-b">
+        <ul>
+          <li onclick="choose()">
+            <img src="./image/file.png" alt="">
+          </li>
+          <li>
+            <img src="./image/emoji.png" alt="">
+          </li>
+          <li>
+            <img src="./image/album.png" alt="">
+          </li>
+          <li>
+            <img src="./image/voice.png" alt="">
+          </li>
+        </ul>
+        <div class="message">
+          <textarea autofocus="true"></textarea>
+          <div class="send" onclick="send()">
+            <span>发送</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+<script>
+  window.init()
+</script>
+
+</html>
